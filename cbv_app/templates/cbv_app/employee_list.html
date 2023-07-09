@@ -1,0 +1,22 @@
+<html>
+	<body>
+        <ul>
+           
+        <!-- {% for object in object_list %} instead of object_list if we want all_employee then changes in views.py -->
+        <!-- {% endfor %} -->
+        {% for object in all_employees %}
+            <li>{{ object.first_name }}</li>
+            <li>{{ object.last_name}}</li>
+            <li>{{ object.mobile }}</li>
+            <li>{{ object.email}}</li>
+        
+            <hr/>
+            
+            {% empty %}
+            <li>No objects yet.</li>
+            {% endfor %}
+        </ul>
+</body>
+</html>
+
+

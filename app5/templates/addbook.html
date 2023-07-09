@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for msg in messages %}
+  {{msg}}
+{% endfor %} 
+<h2>Add Book In Library</h2> 
+
+<form method="post">
+  {% csrf_token %}
+
+  <label>Book Name :- </label>
+  <input type="text" name="nm" required><br><br>
+
+  <label>Book Price :- </label>
+  <input type="text" name="prc" required><br><br>
+
+  <label>Book Qty :- </label>
+  <input type="number" name="qty" required><br><br>
+
+  <label>Book Is Published :- </label>
+  
+  Yes &nbsp;<input type="radio" value="YES" name="ispub" checked>&nbsp;&nbsp;
+  No &nbsp;<input type="radio" value="NO" name="ispub"><br><br>
+
+  <input type="submit" class="btn btn-primary">
+
+</form>
+
+{% endblock %}
+
+
+
+
+
+ 
+
+
+
+
+
+      

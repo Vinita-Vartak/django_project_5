@@ -1,0 +1,50 @@
+<html>
+
+{% load static %}
+<head>
+    <title>Library Application</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+
+</head>
+
+<body> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home_page' %}">Home Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Loggin ">Show Books</a>
+              </li>    
+              
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" > Logged In as {{ user }}</a>
+            </li>   
+              
+            </ul>           
+          </div>
+        </div>
+      </nav>
+      {% comment %} {{ user }} {% endcomment %}
+    <h2>Single Book Information</h2> 
+      <!--Book ID :- {{book.id}} <br>
+      Book Name :- {{book.name}} <br>
+      Book Price :- {{book.price}} <br>
+      Book Qty :- {{book.qty}} <br>
+      Book Is Published :- {{book.is_published}} <br>
+      Book Is Active :- {{book.is_active}} <br> -->
+
+
+      Book ID :- <bold>{{book.id}} </bold><br>
+      Book Price :- <bold>{{book.price}} </bold> <br>
+      Book Qty :- <bold>{{book.qty}}</bold> <br>
+      Book Is Published :- {{book.is_published}}</bold> <br>
+      Book Is Active :- <bold>{{book.is_active}}</bold> <br>
+      Book Name :- <bold>{{book.name}}</bold> <br>
+</body>
+    
+
+</html>
